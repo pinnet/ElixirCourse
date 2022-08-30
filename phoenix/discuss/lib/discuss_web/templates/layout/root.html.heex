@@ -9,6 +9,15 @@
     <%= live_title_tag assigns[:page_title] || "Discuss", suffix: " · Phoenix Framework" %>
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+    <style>
+    @media screen and (max-height: 80vh){
+    .page-footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    }
+    </style>
   </head>
   <body>
     
@@ -23,5 +32,13 @@
       </section>
     </header>
     <%= @inner_content %>
+    <footer class="light-blue page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2022 dannyarnold.com
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
