@@ -7,7 +7,7 @@ defmodule DiscussWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_discuss_key",
-    signing_salt: "9idD6DHX"
+    signing_salt: "DhvC1Mry"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]

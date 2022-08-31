@@ -9,28 +9,14 @@
     <meta name="csrf-token" content={csrf_token_value()}>
     <%= live_title_tag assigns[:page_title] || "Discuss", suffix: " · Phoenix Framework" %>
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/local.css")}/>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
-    <style>
-    .body-content {
-        min-height: calc(100vh - 52px);
-    }
-    .page-footer{
-        font:status-bar;
-        margin:0;
-        padding:0;
-        min-height: 52px;
-    }
-    .large-font{
-      font-family: 'Open Sans', sans-serif;
-      font-size: 2.5em !important; 
-    }
-    </style>
   </head>
   <body>
     <div class="body-content">
     <nav class="light-blue">
       <div class="nav-wrapper container">
-        <a href="/" class="large-font black-text">Discussions</a>
+        <a href="/" class="large-font black-text">Discussions</a><%= button "Login", to: Routes.topic_path(@conn, :new), method: :get, class: "right" %>
       </div>    
     </nav>
     <header>

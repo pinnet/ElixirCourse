@@ -1,0 +1,28 @@
+.body-content {
+    min-height: calc(100vh - 52px - 1.5rem);
+  }
+  
+  .page-footer{
+    font:status-bar;
+    margin-top:1.5rem;
+    padding:0;
+    min-height: 52px;
+  }
+  
+  .large-font{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5em !important; 
+  }
+
+  .invalid-feedback {
+    background-color: #ff0400;
+    color: #ffffff;
+    display: block;
+    padding: 1rem;
+    margin: -1rem 0 2rem;
+  }
+  .alert-danger {
+    color: #000000;
+    background-color: #faa639;
+    border-color: #ebccd1;
+  }

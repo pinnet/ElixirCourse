@@ -15,7 +15,7 @@ config :discuss, DiscussWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: DiscussWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Discuss.PubSub,
-  live_view: [signing_salt: "p2VZKKoQ"]
+  live_view: [signing_salt: "Q8HoR1Dg"]
 
 # Configures the mailer
 #

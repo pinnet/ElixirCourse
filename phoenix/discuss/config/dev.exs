@@ -23,7 +23,7 @@ config :discuss, DiscussWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "7mk2k0gAoZQKQTTebhkpVopvuiI8PBrEkRdyua/JfJQa04b4DFWS+SjiTEWIv6Mb",
+  secret_key_base: "Dpm6a9s9bjvWGnk57yHz6/hn2AFja1EE/GZibVSB0F+Zz/BBAXXVXuu6ANJaHv8K",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
