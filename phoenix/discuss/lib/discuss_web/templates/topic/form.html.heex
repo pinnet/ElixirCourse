@@ -1,7 +1,7 @@
 <.form let={f} for={@changeset} action={@action}>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
-      <p>Please check the errors below.</p>
+      <p><span class="material-symbols-outlined">error</span> Insert failed please check status below.</p>
     </div>
   <% end %>
 

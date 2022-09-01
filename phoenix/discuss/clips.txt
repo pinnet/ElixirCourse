@@ -1,0 +1,12 @@
+<span class="tooltip"><%= link to: Routes.topic_path(@conn, :show, topic) do %>
+        <span class="material-symbols-outlined nav-icons">preview</span><span class="tooltiptext">Show</span>
+        <% end %>
+        </span>
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    
+  </li>
+
+</ul>

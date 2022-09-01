@@ -2,4 +2,8 @@
 
 <%= render "form.html", Map.put(assigns, :action, Routes.topic_path(@conn, :update, @topic)) %>
 
-<span><%= link "Back", to: Routes.topic_path(@conn, :index) %></span>
+<span>
+<%= link to: Routes.topic_path(@conn, :index)  do%>
+<span class="material-symbols-outlined nav-icons">chevron_left</span>Back
+<% end %>
+</span>

@@ -1,13 +1,13 @@
-<h1>Show Topic</h1>
+<h1><%= @topic.title %></h1>
 
-<ul>
 
-  <li>
-    <strong>Title:</strong>
-    <%= @topic.title %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: Routes.topic_path(@conn, :edit, @topic) %></span> |
-<span><%= link "Back", to: Routes.topic_path(@conn, :index) %></span>
+<span>
+<%= link to: Routes.topic_path(@conn, :index)  do%>
+<span class="material-symbols-outlined nav-icons">chevron_left</span>Back
+<% end %>
+</span>|
+<span>
+<%= link to: Routes.topic_path(@conn, :edit, @topic) do%>
+<span class="material-symbols-outlined nav-icons">edit_note</span>Edit
+<% end %>
+</span>

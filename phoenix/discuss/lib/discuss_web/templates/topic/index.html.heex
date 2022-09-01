@@ -1,4 +1,4 @@
-<h1 class="large-font">Topics</h1>
+<h1 >Topics</h1>
 
 <table >
   <thead>
@@ -11,11 +11,18 @@
   <tbody>
 <%= for topic <- @topics do %>
     <tr>
-      <td><%= topic.title %></td>
+      <td><%= link to: Routes.topic_path(@conn, :show, topic) do %><%= topic.title %><% end %></td>
       <td>
-        <span class="right"><%= link "❌", to: Routes.topic_path(@conn, :delete, topic), method: :delete, data: [confirm: "Are you sure?"] %></span>
-        <span class="right"><%= link "📝", to: Routes.topic_path(@conn, :edit, topic) %></span>
-        <span class="right"><%= link "👁️‍🗨️", to: Routes.topic_path(@conn, :show, topic) %></span>
+      <div class="right">
+        <span class="tooltip"><%= link to: Routes.topic_path(@conn, :edit, topic)  do %>
+        <span class="material-symbols-outlined nav-icons">edit_note</span><span class="tooltiptext">Edit</span>
+        <% end %>
+        </span>
+        <span class="tooltip"><%= link to: Routes.topic_path(@conn, :delete, topic), method: :delete, data: [confirm: "Are you sure?"] do %>
+        <span class="material-symbols-outlined nav-icons">delete</span><span class="tooltiptext">Delete</span>
+        <% end %>
+        </span>
+      </div>
       </td>
     </tr>
 <% end %>
