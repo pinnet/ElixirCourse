@@ -19,8 +19,8 @@
   border-color: #faebcc;
 }
 .alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
+  color: #000000;
+  background-color: #faa639;
   border-color: #ebccd1;
 }
 .alert p {
@@ -30,9 +30,12 @@
   display: none;
 }
 .invalid-feedback {
-  color: #a94442;
+  background-color: #ffffff;
+  color: #ff0000;
   display: block;
+  padding: 0.5rem;
   margin: -1rem 0 2rem;
+  font-weight: bold;
 }
 
 /* LiveView specific classes for your customization */

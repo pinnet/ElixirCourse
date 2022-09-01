@@ -17,8 +17,9 @@
     <div class="body-content">
     <nav class="light-blue">
       <div class="nav-wrapper container">
-        <a href="/" class="large-font black-text">Discussions</a><%= button "Login", to: Routes.topic_path(@conn, :new), method: :get, class: "right" %>
+        <a href="/" class="large-font black-text">Discussions</a><span class="right"><%= button "Log in", to: Routes.user_session_path(@conn, :new), method: :get %>&nbsp;<%= link "x", to: Routes.user_session_path(@conn, :delete), method: :delete %></span>
       </div>    
+      <%= render "_user_menu.html", assigns %>    
     </nav>
     <header>
       <section class="page-header container">
