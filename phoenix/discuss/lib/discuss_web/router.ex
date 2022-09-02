@@ -1,4 +1,10 @@
 defmodule DiscussWeb.Router do
+  @moduledoc """
+  This is the Discuss router to route web requests.
+  """
+  @moduledoc since: "1.0.0"
+
+
   use DiscussWeb, :router
 
   import DiscussWeb.UserAuth
@@ -59,7 +65,7 @@ defmodule DiscussWeb.Router do
   #
   # Note that preview only shows emails that were sent by the same
   # node running the Phoenix server.
-  
+
   if Mix.env() == :dev do
     scope "/dev" do
       pipe_through :browser
