@@ -1,0 +1,1 @@
+<span class="right"><%= button "Log in", to: Routes.user_session_path(@conn, :new), method: :get %>&nbsp;<%= link "x", to: Routes.user_session_path(@conn, :delete), method: :delete %></span>
