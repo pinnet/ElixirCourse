@@ -15,6 +15,7 @@
   <body>
     <div class="body-content">
     <nav class="amber accent-3">
+      <span class="material-symbols-outlined theme-switch">light_mode</span>
       <div class="nav-wrapper container">
         <a href="/" class="large-font black-text">Discussions</a>
       </div>     
@@ -33,5 +34,28 @@
         </div>
       </div>
     </footer>
+    <script>
+      const btn = document.querySelector(".theme-switch");
+      const darkColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+      let dark_mode = darkColorScheme.matches;
+      updateTheme(dark_mode);
+
+      darkColorScheme.addEventListener("change", function(e){
+         dark_mode = e.matches;
+         updateTheme(dark_mode);
+        });
+
+      btn.addEventListener("click",function(){
+        dark_mode = !dark_mode;
+        updateTheme(dark_mode);           
+      });
+
+      function updateTheme(theme_mode){
+        if(theme_mode){ document.documentElement.setAttribute("data-theme", "dark"); }
+         else {document.documentElement.setAttribute("data-theme", "");}
+        if (theme_mode){btn.innerHTML="light_mode";}
+        else {btn.innerHTML="dark_mode";}
+      }
+    </script>
   </body>
 </html>

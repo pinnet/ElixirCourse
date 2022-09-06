@@ -1,5 +1,19 @@
 /* This file is for your main application CSS */
+
 @import "./phoenix.css";
+
+
+
+body{
+  color:#000;
+  color:var(--font-color);
+  background:rgb(243,243,243);
+  background:var(--bg-color);
+}
+a{
+    color:#1C75B9;
+    color:var(--link-color);
+}
 
 /* Alerts and form errors used by phx.new */
 .alert {
@@ -74,7 +88,6 @@
 }
 
 .phx-modal-close {
-  color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -82,7 +95,6 @@
 
 .phx-modal-close:hover,
 .phx-modal-close:focus {
-  color: black;
   text-decoration: none;
   cursor: pointer;
 }
@@ -219,4 +231,13 @@ margin-top: 6px;
 .remember-me{
 opacity: 0;
 padding-left: 30px;
+}
+.theme-switch{
+  content:"light_mode";
+  position: absolute;
+  right: 0em;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color:black;
 }

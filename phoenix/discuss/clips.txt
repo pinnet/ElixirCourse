@@ -1,1 +1,36 @@
 <span class="right"><%= button "Log in", to: Routes.user_session_path(@conn, :new), method: :get %>&nbsp;<%= link "x", to: Routes.user_session_path(@conn, :delete), method: :delete %></span>
+
+if (prefersDarkScheme.matches) { btn.innerHTML="light_mode"; }
+        else { btn.innerHTML="dark_mode"; }
+
+
+       
+addEventListener("change", function(e){alert(e);})
+
+
+const darkColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
+      const btn = document.querySelector(".theme-switch");
+      let dark_mode = darkColorScheme.matches;
+      document.body.classList.add(dark_mode ? "dark-theme" : "light-theme");
+      change_color_theme_icon(dark_mode);
+      
+      darkColorScheme.addEventListener("change", function(e){
+          dark_mode = e.matches;
+          change_color_theme_icon(dark_mode);
+          change_color_theme(dark_mode);
+        });
+
+      btn.addEventListener("click",function(){
+        dark_mode = !dark_mode;
+        change_color_theme(dark_mode);
+        change_color_theme_icon(dark_mode);                
+      });
+
+      function change_color_theme_icon(mode){
+        if (mode){btn.innerHTML="light_mode";}
+        else {btn.innerHTML="dark_mode";}
+      }
+      function change_color_theme(mode){
+        if (mode){document.body.classList.replace("light-theme","dark-theme");}
+        else {document.body.classList.replace("dark-theme","light-theme");}
+      }     
