@@ -1,9 +1,6 @@
 /* This file is for your main application CSS */
 
 @import "./phoenix.css";
-
-
-
 body{
   color:#000;
   color:var(--font-color);
@@ -14,7 +11,11 @@ a{
     color:#1C75B9;
     color:var(--link-color);
 }
-
+input{
+    color:white;
+    color:var(--formtext);
+    font-size: larger;
+}
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
@@ -44,7 +45,6 @@ a{
   display: none;
 }
 .invalid-feedback {
-  background-color: #ffffff;
   color: #ff0000;
   display: block;
   padding: 0.5rem;

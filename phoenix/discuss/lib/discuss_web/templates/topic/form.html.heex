@@ -1,0 +1,15 @@
+<.form let={f} for={@changeset} action={@action}>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p><span class="material-symbols-outlined">error</span> Insert failed please check status below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :title %>
+  <%= text_input f, :title %>
+  <%= error_tag f, :title %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+</.form>

@@ -1,0 +1,13 @@
+<h1><%= @topic.title %></h1>
+
+
+<span>
+<%= link to: Routes.topic_path(@conn, :index)  do%>
+<span class="material-symbols-outlined nav-icons">chevron_left</span>Back
+<% end %>
+</span>|
+<span>
+<%= link to: Routes.topic_path(@conn, :edit, @topic) do%>
+<span class="material-symbols-outlined nav-icons">edit_note</span>Edit
+<% end %>
+</span>

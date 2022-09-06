@@ -1,0 +1,9 @@
+<h1>Edit Topic</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.topic_path(@conn, :update, @topic)) %>
+
+<span>
+<%= link to: Routes.topic_path(@conn, :index)  do%>
+<span class="material-symbols-outlined nav-icons">chevron_left</span>Back
+<% end %>
+</span>

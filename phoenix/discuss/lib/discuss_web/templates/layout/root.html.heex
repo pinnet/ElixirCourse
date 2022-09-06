@@ -38,15 +38,22 @@
       const btn = document.querySelector(".theme-switch");
       const darkColorScheme = window.matchMedia("(prefers-color-scheme: dark)")
       let dark_mode = darkColorScheme.matches;
+      let dark_mode_cookie = localStorage.getItem("dark-mode")
+      
+      if( dark_mode_cookie !== null) {
+          dark_mode = (dark_mode_cookie === "true") ? true : false;
+      }
       updateTheme(dark_mode);
 
       darkColorScheme.addEventListener("change", function(e){
-         dark_mode = e.matches;
-         updateTheme(dark_mode);
-        });
+        if(localStorage.getItem("dark-mode") !== null) return;
+        dark_mode = e.matches;
+        updateTheme(dark_mode);
+      });
 
       btn.addEventListener("click",function(){
         dark_mode = !dark_mode;
+        localStorage.setItem("dark-mode",dark_mode)
         updateTheme(dark_mode);           
       });
 

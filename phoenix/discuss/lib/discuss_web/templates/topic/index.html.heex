@@ -1,0 +1,32 @@
+<h1 >Topics</h1>
+
+<table >
+  <thead>
+    <tr>
+      <th>Title</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for topic <- @topics do %>
+    <tr>
+      <td><%= link to: Routes.topic_path(@conn, :show, topic) do %><%= topic.title %><% end %></td>
+      <td>
+      <div class="right">
+        <span class="tooltip"><%= link to: Routes.topic_path(@conn, :edit, topic)  do %>
+        <span class="material-symbols-outlined nav-icons">edit_note</span><span class="tooltiptext">Edit</span>
+        <% end %>
+        </span>
+        <span class="tooltip"><%= link to: Routes.topic_path(@conn, :delete, topic), method: :delete, data: [confirm: "Are you sure?"] do %>
+        <span class="material-symbols-outlined nav-icons">delete</span><span class="tooltiptext">Delete</span>
+        <% end %>
+        </span>
+      </div>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= button "New Topic", to: Routes.topic_path(@conn, :new), method: :get %></span>
