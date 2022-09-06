@@ -6,6 +6,7 @@ defmodule DiscussWeb.TopicController do
 
   def index(conn, _params) do
     topics = Topics.list_topics()
+    IO.inspect(conn.assigns)
     render(conn, "index.html", topics: topics)
   end
 
