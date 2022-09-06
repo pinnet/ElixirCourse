@@ -4,6 +4,13 @@ defmodule DiscussWeb.OAuthController do
   alias DiscussWeb.Router.Helpers, as: Routes
   alias Discuss.OAuthUsers
 
+  def signout(conn,_params) do
+    conn
+      |> put_flash(:info,"You signed out successfully")
+      |> configure_session(drop: true)
+      |> redirect(to: Routes.topic_path(conn, :index))
+  end
+
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn,%{"provider" => provider} = _params) do
 
     user_params = %{token: auth.credentials.token, email: auth.info.email, provider: provider}

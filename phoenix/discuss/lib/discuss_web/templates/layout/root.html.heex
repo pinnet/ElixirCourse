@@ -17,7 +17,16 @@
     <nav class="amber accent-3">
       <span class="material-symbols-outlined theme-switch">light_mode</span>
       <div class="nav-wrapper container">
-        <a href="/" class="large-font black-text">Discussions</a><div class="login-github right"><span><img class="github-logo" src="/images/github.png"></span><span>login with github</span></div>
+        <a href="/" class="large-font black-text">Discussions</a>
+        <%= if @conn.assigns[:user] do%>
+          <%= link to: Routes.o_auth_path(@conn,:signout) do%>
+          <div class="right">logout</div>
+          <% end %>
+        <% else %>
+          <%= link to: Routes.o_auth_path(@conn,:request, "github") do%>
+              <div class="login-github right"><img class="github-logo" src="/images/github.png">login with github</div>
+          <% end %>
+        <% end %>
       </div>     
     </nav>
     <header>
