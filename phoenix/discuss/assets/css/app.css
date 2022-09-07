@@ -1,19 +1,43 @@
 /* This file is for your main application CSS */
 
+
+@import "./themes.css";
 @import "./phoenix.css";
 
-body{
-  color:#000;
-  color:var(--font-color);
-  background:rgb(243,243,243);
-  background:var(--bg-color);
+@keyframes fade-in-scale-keys{
+  0% { scale: 0.95; opacity: 0; }
+  100% { scale: 1.0; opacity: 1; }
 }
 
-a{
-    color:#1C75B9;
-    color:var(--link-color);
+@keyframes fade-out-scale-keys{
+  0% { scale: 1.0; opacity: 1; }
+  100% { scale: 0.95; opacity: 0; }
 }
 
+@keyframes fade-in-keys{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out-keys{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes remove-keys{
+  to
+  { 
+    padding: 0;
+    margin: 0;
+    width:0;
+    height:0;
+    overflow:hidden;
+    visibility: hidden;
+  }
+}
+a {
+  color:var(--link-color);
+}
 input{
     color:white;
     color:var(--formtext);
@@ -28,21 +52,24 @@ input{
 }
 
 .alert-info {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
+  color: var(--alert-info-text);
+  background-color:var(--alert-info-back);
+  border-color: var(--theme-contrast);
+  border-radius: 8px;
 }
 
 .alert-warning {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
+  color: var(--alert-warning-text);
+  background-color: var(--alert-warning-back);
+  border-color: var(--theme-contrast);
+  border-radius: 8px;
 }
 
 .alert-danger {
-  color: #000000;
-  background-color: #faa639;
-  border-color: #ebccd1;
+  color: var(--alert-error-text);
+  background-color: var(--alert-error-back);
+  border-color:var(--theme-contrast);
+  border-radius: 8px;
 }
 
 .alert p {
@@ -120,26 +147,6 @@ input{
 }
 .fade-out {
   animation: 0.2s ease-out 0s normal forwards 1 fade-out-keys;
-}
-
-@keyframes fade-in-scale-keys{
-  0% { scale: 0.95; opacity: 0; }
-  100% { scale: 1.0; opacity: 1; }
-}
-
-@keyframes fade-out-scale-keys{
-  0% { scale: 1.0; opacity: 1; }
-  100% { scale: 0.95; opacity: 0; }
-}
-
-@keyframes fade-in-keys{
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes fade-out-keys{
-  0% { opacity: 1; }
-  100% { opacity: 0; }
 }
 
 .body-content {
@@ -268,4 +275,15 @@ input{
   font-size: 1.5em;
   cursor: pointer;
   color:black;
+}
+
+.hide-me {
+  animation: fade-out-keys 2s ease-out 3s, 0s remove-keys 5s linear;
+  animation-direction: forwards;
+  animation-fill-mode: forwards;
+}
+.flash-me {
+  animation: fade-in-keys 1s ease-out, 1s fade-out-keys 1.5s ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }

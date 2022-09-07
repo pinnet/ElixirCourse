@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/open-sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta name="csrf-token" content={csrf_token_value()}>
     <%= live_title_tag assigns[:page_title] || "Discuss", suffix: " · Phoenix Framework" %>
@@ -14,13 +13,13 @@
   </head>
   <body>
     <div class="body-content">
-    <nav class="amber accent-3">
-      <span class="material-symbols-outlined theme-switch">light_mode</span>
+    <nav class="header-back">
+      <span class="material-symbols-outlined theme-switch header-text">light_mode</span>
       <div class="nav-wrapper container">
-        <a href="/" class="large-font black-text">Discussions</a>
+        <a href="/" class="large-font header-text">Discussions</a>
         <%= if @conn.assigns[:user] do%>
           <%= link to: Routes.o_auth_path(@conn,:signout) do%>
-          <div class="right">logout</div>
+          <div class="right header-text">logout</div>
           <% end %>
         <% else %>
           <%= link to: Routes.o_auth_path(@conn,:request, "github") do%>
@@ -35,11 +34,11 @@
     </header>
     <%= @inner_content %>
     </div>
-    <footer class="amber accent-3 page-footer">
-      <div class="black-text footer-copyright">
+    <footer class="footer-back page-footer">
+      <div class="footer-copyright footer-text">
         <div class="container">
         © 2022 dannyarnold.com
-        <a class="right black-text" href="#!">About</a>
+        <a class="right footer-text" href="#!">About</a>
         </div>
       </div>
     </footer>
