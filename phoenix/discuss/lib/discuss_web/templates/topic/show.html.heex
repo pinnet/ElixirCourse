@@ -1,13 +1,16 @@
 <h1><%= @topic.title %></h1>
+<button>Ping</button>
 
-
-<span>
-<%= link to: Routes.topic_path(@conn, :index)  do%>
-<span class="material-symbols-outlined nav-icons">chevron_left</span>Back
-<% end %>
-</span>|
-<span>
-<%= link to: Routes.topic_path(@conn, :edit, @topic) do%>
-<span class="material-symbols-outlined nav-icons">edit_note</span>Edit
-<% end %>
-</span>
+<p></p>
+<div>
+    <span>
+    <%= link to: Routes.topic_path(@conn, :index)  do%>
+    <span class="material-symbols-outlined nav-icons">chevron_left</span>Back
+    <% end %>
+    </span>|
+    <span>
+    <%= link to: Routes.topic_path(@conn, :edit, @topic) do%>
+    <span class="material-symbols-outlined nav-icons">edit_note</span>Edit
+    <% end %>
+    </span>
+</div>

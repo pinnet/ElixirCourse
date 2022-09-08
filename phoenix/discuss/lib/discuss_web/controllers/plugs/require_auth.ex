@@ -12,10 +12,9 @@ defmodule DiscussWeb.Plugs.RequireAuth  do
         conn
     else
         conn
-          |> put_flash(:error, "You must be logged in to continue!")
+          |> put_flash(:error, "You must be logged in to perform this action")
           |> redirect(to: Helpers.topic_path(conn, :index))
           |> halt()
     end
-
   end
 end

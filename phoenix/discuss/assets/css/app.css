@@ -35,13 +35,10 @@
     visibility: hidden;
   }
 }
-a {
-  color:var(--link-color);
-}
+
 input{
     color:white;
     color:var(--formtext);
-    font-size: larger;
 }
 
 .alert {
@@ -180,10 +177,14 @@ input{
   font-size: 1.5em;
 }
 
-.nav-icons:hover{
-  font-size: 2em;
+.socket-icon{
+  position: absolute;
+  right: 13px;
+  top: 42px;
+  color:var(--header-color);
+  font-size: 1em;
+  cursor: help;
 }
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -276,7 +277,15 @@ input{
   cursor: pointer;
   color:black;
 }
-
+.theme-switch:hover{
+  font-size: 2em;
+}
+.logout{
+  color:var(--header-color);
+}
+.logout:hover{
+    font-size: large;
+}
 .hide-me {
   animation: fade-out-keys 2s ease-out 3s, 0s remove-keys 5s linear;
   animation-direction: forwards;

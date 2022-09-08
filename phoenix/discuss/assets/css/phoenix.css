@@ -31,7 +31,7 @@ blockquote *:last-child{
   background-color:var(--button-face);
   border:0.1rem solid var(--theme-contrast);
   border-radius:.4rem;
-  color:var(--button-text);
+  color:var(--buton-text);
   cursor:pointer;
   display:inline-block;
   font-size:1.1rem;
@@ -46,9 +46,9 @@ blockquote *:last-child{
   white-space:nowrap;
 }
 .button:focus,.button:hover,button:focus,button:hover,input[type='button']:focus,input[type='button']:hover,input[type='reset']:focus,input[type='reset']:hover,input[type='submit']:focus,input[type='submit']:hover{
-  background-color:var(--button-hover);
+  background-color:var(--button-hover-back);
   border-color:var(--theme-contrast);
-  color:#fff;
+  color:var(--button-hover-text);
   outline:0;
 }
 .button[disabled],button[disabled],input[type='button'][disabled],input[type='reset'][disabled],input[type='submit'][disabled]{
@@ -66,7 +66,7 @@ blockquote *:last-child{
 .button.button-outline:focus,.button.button-outline:hover,button.button-outline:focus,button.button-outline:hover,input[type='button'].button-outline:focus,input[type='button'].button-outline:hover,input[type='reset'].button-outline:focus,input[type='reset'].button-outline:hover,input[type='submit'].button-outline:focus,input[type='submit'].button-outline:hover{
   background-color:transparent;
   border-color:#606c76;
-  color:#606c76;
+  color:#ffffff;
 }
 .button.button-outline[disabled]:focus,.button.button-outline[disabled]:hover,button.button-outline[disabled]:focus,button.button-outline[disabled]:hover,
 input[type='button'].button-outline[disabled]:focus,input[type='button'].button-outline[disabled]:hover,input[type='reset'].button-outline[disabled]:focus,
@@ -84,7 +84,7 @@ input[type='button'].button-clear:hover,input[type='reset'].button-clear:focus,i
 input[type='submit'].button-clear:hover{
   background-color:transparent;
   border-color:transparent;
-  color:#606c76;
+  color:#ffffff;
 }
 .button.button-clear[disabled]:focus,.button.button-clear[disabled]:hover,button.button-clear[disabled]:focus,button.button-clear[disabled]:hover,
 input[type='button'].button-clear[disabled]:focus,input[type='button'].button-clear[disabled]:hover,input[type='reset'].button-clear[disabled]:focus,
@@ -119,7 +119,7 @@ input[type='password'],input[type='search'],input[type='tel'],input[type='text']
 textarea,select{
   -webkit-appearance:none;
   background-color:transparent;
-  border:0.1rem solid #d1d1d1;
+  border:0.1rem solid #8b8b8b;
   border-radius:.4rem;
   box-shadow:none;
   box-sizing:inherit;
@@ -226,7 +226,7 @@ input[type='checkbox'],input[type='radio']{
       padding:0 1.0rem
     }
 }
-a{color:#0069d9;text-decoration:none}
+a{color:var(--link-color);text-decoration:none}
 a:focus,a:hover{color:var(--button-hover)}
 dl,ol,ul{list-style:none;margin-top:0;padding-left:0}
 dl dl,dl ol,dl ul,ol dl,ol ol,ol ul,ul dl,ul ol,ul ul{font-size:90%;margin:1.5rem 0 1.5rem 3.0rem}
@@ -236,7 +236,7 @@ ul{list-style:circle inside}
 fieldset,input,select,textarea{margin-bottom:1.5rem}
 blockquote,dl,figure,form,ol,p,pre,table,ul{margin-bottom:2.5rem}
 table{border-spacing:0;display:block;overflow-x:auto;text-align:left;width:100%}
-td,th{border-bottom:0.1rem solid #e1e1e1;padding:1.2rem 1.5rem}
+td,th{border-bottom:0.1rem solid var(--theme-contrast-50);padding:1.2rem 1.5rem}
 td:first-child,th:first-child{padding-left:0}
 td:last-child,th:last-child{padding-right:0}
 

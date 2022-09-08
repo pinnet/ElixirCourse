@@ -1,3 +1,6 @@
+netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 connectport=4000 connectaddress=172.17.181.83
+
+
 <span class="right"><%= button "Log in", to: Routes.user_session_path(@conn, :new), method: :get %>&nbsp;<%= link "x", to: Routes.user_session_path(@conn, :delete), method: :delete %></span>
 
 if (prefersDarkScheme.matches) { btn.innerHTML="light_mode"; }

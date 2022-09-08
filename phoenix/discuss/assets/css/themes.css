@@ -1,5 +1,8 @@
 :root {
     --theme-contrast:black;
+    --theme-contrast-75:rgb(77, 76, 76);
+    --theme-contrast-50:rgb(129, 129, 129);
+    --theme-contrast-25:rgb(197, 194, 194);
     --font-color: #000;
     --link-color:#030197;
     --link-selected-color:#fff;
@@ -9,7 +12,7 @@
     --heroborder: black;
     --formtext:black;
     --header-background:#0c4b0f;
-    --headder-color:rgb(255, 255, 255);
+    --header-color:rgb(255, 255, 255);
     --footer-background:var(--header-background);
     --footer-color:var(--header-color);
     --alert-error-back:rgb(255, 51, 0);
@@ -18,13 +21,17 @@
     --alert-error-text:rgb(255, 246, 246);
     --alert-warning-text:rgb(3, 3, 3);
     --alert-info-text:rgb(0, 0, 0);
-    --button-face:rgb(73, 82, 204);
+    --button-face:green;
     --buton-text:white;
-    --button-hover:grey;
-    
+    --button-hover-back:var(--header-background);
+    --button-hover-text:rgb(255, 255, 255);
+    --selection:grey;    
   }
   [data-theme="dark"] {
     --theme-contrast:white;
+    --theme-contrast-75:rgb(180, 180, 180);
+    --theme-contrast-50:rgb(129, 129, 129);
+    --theme-contrast-50:rgb(71, 70, 70);
     --font-color: #c1bfbd;
     --link-color:#ebdc0c;
     --link-selected-color:#c1bfbd;
@@ -43,9 +50,11 @@
     --alert-error-text:rgb(255, 246, 246);
     --alert-warning-text:rgb(3, 3, 3);
     --alert-info-text:rgb(0, 0, 0);
-    --button-face:darkorange;
-    --buton-text:white;
-    --button-hover:grey;
+    --button-face: var(--header-background);
+    --buton-text:rgb(0, 0, 0);
+    --button-hover-back:rgb(43, 22, 6);
+    --button-hover-text:rgb(255, 255, 255);
+    --selection:grey;
   }
 
 body{
